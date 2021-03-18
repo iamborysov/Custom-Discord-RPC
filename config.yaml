@@ -1,0 +1,34 @@
+# -----------------
+# Конфиг Custom Discord RPC
+# -----------------
+# Прочитайте README.md перед тем как задавать вопрасы
+
+client_id: 734118305962655875
+# Ваш client id, который вы создали на сайте Discord Developers
+
+game_cycle:
+
+  time_until_cycle: 30
+  # Время смены игры
+
+  games:
+    -
+      details: Хей!
+      state: Я 14 летний програмист.
+      large_image: wave_large
+    -
+      details: Посмотрите мой GitHub!
+      state: https://github.com/iamborysov
+      large_image: gh_large
+      large_text: iamborysov
+    -
+      details: Сделано с помощью Custom Discord RPC!
+      state: Эта надпись сделана с помощью Custom Discord RPC.
+      large_image: discord_large
+      large_text: Ищите Custom Discord RPC на гитхабе. Вы его там найдёте.
+    -
+      details: Tusha
+      state: Miuna Лучший бот в дискорде!
+      large_image: miuna_large
+      large_text: Логотип!
+  # Список игр которые будут отображаться
