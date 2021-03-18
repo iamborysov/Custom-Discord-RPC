@@ -1,57 +1,52 @@
 [![Discord](https://img.shields.io/discord/459760634024820736.svg)](https://discord.gg/gx5xc5j)
 [![Build Status](https://travis-ci.org/JakeMakesStuff/DCustomRPC.svg?branch=master)](https://travis-ci.org/JakeMakesStuff/DCustomRPC)
 
-# DCustomRPC: The Rewrite!
+# Custom Discord RPC
 
-**The icon used for this project is [here](https://www.shareicon.net/logo-website-discord-887435).**
+Custom Discord RPC это кастомный статус для вашего дискорда!
 
-DCustomRPC is a custom rich presence client that you (you right there, yes you) can customize.
-
-![intro_img](https://i.imgur.com/8Pf5HjT.png)
-
-## Setting up the config:
-The config should be fairly easy to setup:
-1. Firstly go to Discord Developers (https://discordapp.com/developers/applications/) and sign in.
-2. From here, click the "New App" button and enter a "App Name". This will show as what you are playing. "App Description" and "App Icon" do not matter for rich presence.
-3. After this, you should be on the application page. Scroll down and click "Enable Rich Presence" and then "Save Changes".
-4. After you have done this, you can copy the "Client ID" (under "App Details") and replace the client_id already in the config file.
-5. To setup the game list, we will need to seperate each of the games by a "-" with the spacing from the config for the dashes and the remaining keys. Each game can contain the following:
-    - `details` - This is the shorter description for the game:
+## Настраиваем конфиг:
+Конфиг должен быть довольно простым в настройке:
+1. Сначала зайдите на сайт Discord Developers (https://discordapp.com/developers/applications/) и войдите в систему.
+2. Далее нажмите кнопку «New app» и введите «App name». Это покажет, во что вы играете. «Описание приложения» и «Значок приложения» не имеют значения для Rich Presence.
+3. После этого вы должны оказаться на странице приложения. Прокрутите вниз и нажмите «Включить Rich Presence», а затем «Сохранить изменения».
+4. После этого вы можете скопировать «Идентификатор клиента» (в разделе «Сведения о приложении») и заменить client_id уже в файле конфигурации.
+5. Чтобы настроить список игр, нам нужно будет разделить каждую из игр знаком «-» с интервалом из конфигурации для тире и оставшихся клавиш. Каждая игра может содержать следующие:
+    - `details` - Это краткое описание игры:
 
         ![details](https://i.imgur.com/9Z7OdfI.png)
-    - `state` - This is the longer description for the game:
+    - `state` - Это более подробное описание игры:
 
         ![state](https://i.imgur.com/i1YbCfd.png)
-    - `large_image` - The image key for the large image on the game. In order to attach your image to a key, open up your Discord Developers page for your app and scroll down to "Rich Presence Assets". From here, since we want a large image, we upload the image, enter the key (which we will write in the config) and select "Large". Then make sure to click "Upload Asset" and "Save Changes". After we add to the config, this will look like this:
+    - `large_image` - Ключ изображения для большого изображения в игре. Чтобы прикрепить свое изображение к ключу, откройте страницу Discord Developers для своего приложения и прокрутите вниз до «Rich Presence Assets». Отсюда, поскольку нам нужно большое изображение, мы загружаем изображение, вводим ключ (который мы напишем в конфигурации) и выбираем «Большой». Затем не забудьте нажать «Загрузить объект» и «Сохранить изменения». После добавления в конфиг это будет выглядеть так:
 
         ![lg_image](https://i.imgur.com/KbQdc61.png)
-    - `large_text` - This will be the text for when you hover over the large image:
+    - `large_text` - Это будет текст при наведении курсора на большое изображение:
 
         ![lg_text](https://i.imgur.com/nNRHtxo.png)
-    - `small_image` - The image key for the small image on the game. In order to attach your image to a key, open up your Discord Developers page for your app and scroll down to "Rich Presence Assets". From here, since we want a small image, we upload the image, enter the key (which we will write in the config) and select "Small". Then make sure to click "Upload Asset" and "Save Changes". After we add to the config, this will look like this:
+    - `small_image` - Ключ изображения для небольшого изображения в игре. Чтобы прикрепить свое изображение к ключу, откройте страницу Discord Developers для своего приложения и прокрутите вниз до «Rich Presence Assets». Отсюда, поскольку нам нужно маленькое изображение, мы загружаем изображение, вводим ключ (который мы напишем в конфиге) и выбираем «Маленький». Затем не забудьте нажать «Загрузить объект» и «Сохранить изменения». После добавления в конфиг это будет выглядеть так:
 
         ![sm_image](https://i.imgur.com/wjo0Nkx.png)
-    - `small_text` - This will be the text for when you hover over the small image:
+    - `small_text` - Это будет текст, когда вы наводите курсор на маленькое изображение:
 
         ![sm_text](https://i.imgur.com/EApOnTl.png)
 
-## Useful Links
-[Python 3.6.6](https://www.python.org/downloads/release/python-366/) 
+## Полезные ссылки
+[Python 3.9.2](https://www.python.org/downloads/) 
 
-[Repo Download: Stable](https://github.com/JakeMakesStuff/DCustomRPC/archive/master.zip) 
+[Скачать репозиторий: Стабильная версия](https://github.com/iamborysov/Custom-Discord-RPC.git) 
 
-## Discord prerequisites:
-Please make sure that game statuses are turned on:
+## Обязательно включите это:
+Обязательное условие для Discord Убедитесь, что статусы игры включены:
 
 ![Game Toggle](https://i.imgur.com/V4FWevH.png)
 
-## Setting up DCustomRPC:
-DCustomRPC requires Python 3.6+. If you have anything older installed, you will need to install Python 3.6+ and make sure it is added to the PATH. From here, you can run `py -m pip install -r requirements.txt` (the `py` bit might change to `python3.5`/`python3.6`, try that if you can't get that to work).
+## Настройка Custom Discord RPC:
+Custom Discord RPC требует Python 3.6+. Если у вас установлено что-то более старое, вам нужно будет установить Python 3.6+ и убедиться, что он добавлен в PATH. Отсюда вы можете запустить `py -m pip install -r requirements.txt` (бит` py` может измениться на `python3.5` /` python3.6`, попробуйте это, если вы не можете заставить это работать ).
+## Запуск Custom Discord RPC в командной строке:
 
-## Starting DCustomRPC in the commandline:
+Чтобы проверить, что все работает в командной строке, вы можете запустить `py customdiscordrpc.pyw`.
 
-In order to check everything is working in the command line, you can run `py dcustomrpc.pyw`.
+## Запуск Custom Discord RPC при загрузке Windows: 
 
-## Starting DCustomRPC on Windows Boot: 
-
-On Windows to set this to start on boot, simply take the `dcustomrpc.pyw`, right click it, hover over "Send to" then click "Desktop (create shortcut)". Then cut the icon from your desktop, go to `shell:startup` in Windows Explorer and paste it in there.
+В Windows, чтобы настроить запуск при загрузке, просто возьмите `customdiscordrpc.pyw`, щелкните его правой кнопкой мыши, наведите указатель мыши на« Отправить », затем нажмите« Рабочий стол (создать ярлык) ». Затем вырежьте значок со своего рабочего стола, перейдите в `shell: startup` в проводнике Windows и вставьте его туда.
