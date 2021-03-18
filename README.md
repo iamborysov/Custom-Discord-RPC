@@ -1,6 +1,5 @@
-[![Discord](https://img.shields.io/discord/459760634024820736.svg)](https://discord.gg/gx5xc5j)
-[![Build Status](https://travis-ci.org/JakeMakesStuff/DCustomRPC.svg?branch=master)](https://travis-ci.org/JakeMakesStuff/DCustomRPC)
 
+<<<<<<< HEAD
 # Custom Discord RPC
 
 Custom Discord RPC это кастомный статус для вашего дискорда!
@@ -50,3 +49,5 @@ Custom Discord RPC требует Python 3.6+. Если у вас установ
 ## Запуск Custom Discord RPC при загрузке Windows: 
 
 В Windows, чтобы настроить запуск при загрузке, просто возьмите `customdiscordrpc.pyw`, щелкните его правой кнопкой мыши, наведите указатель мыши на« Отправить », затем нажмите« Рабочий стол (создать ярлык) ». Затем вырежьте значок со своего рабочего стола, перейдите в `shell: startup` в проводнике Windows и вставьте его туда.
+=======
+>>>>>>> 0552740b3ebee738bd81d3944a9d4e5090ba3484
